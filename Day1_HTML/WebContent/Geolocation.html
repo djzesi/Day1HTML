@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	if(navigator.geolocation){
+		console.log("Supported");
+		navigator.geolocation.getCurrentPosition(showPosition,errorMessage);
+	}
+	else{
+		console.log("geolocation not supported");
+	}
+	function showPosition(position){
+		console.log(position.coords.latitude);
+		console.log(position.coords.longitude);
+	}
+	function errorMessage(){
+		console.log("Enable to retreive the Coordinates")
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

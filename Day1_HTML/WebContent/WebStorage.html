@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function storeInLocal(){
+		
+		var name=document.getElementById("name").value;
+		localStorage.setItem("username",name)
+		document.write(name+" stored in local storage")
+	}
+	
+	function storeInSession(){
+		
+		var name=document.getElementById("session_name").value;
+		sessionStorage.setItem("username",name)
+		document.write(name+" stored in session storage")
+	}
+</script>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td>Store in local </td>
+				<td><input type="text" id="name"></td>
+			</tr>
+			
+			<tr>
+				<td><input type="button" value="Store in local" onclick="storeInLocal()"></td>
+			</tr>
+		</table>
+	</form>
+	
+	<form>
+		<table>
+			<tr>
+				<td>Store in Session </td>
+				<td><input type="text" id="session_name"></td>
+			</tr>
+			
+			<tr>
+				<td><input type="button" value="Store in Session" onclick="storeInSession()"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

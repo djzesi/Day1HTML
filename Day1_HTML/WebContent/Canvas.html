@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+#container{
+	border-style: solid;
+	border-color: black;
+}
+</style>
+</head>
+<body>
+<canvas id="container" width="800px" height="600px">
+	Let me Visible. Upgrade your browser!! You are not my type!
+</canvas>
+<button onclick="drawline()">Line</button>
+<svg width=300px height=300px>
+	<circle cx=50 cy=50 r=25 fill="blue"/>
+</svg>
+</body>
+<script type="text/javascript">
+
+function drawline(){
+	
+	var canvas=document.getElementById("container")
+	var context=canvas.getContext("2d")
+	context.beginPath()
+	context.moveTo(0,0)
+	context.lineTo(200,200)
+	context.stroke()
+}
+</script>
+</html>
