@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	console.log("Sequential Execution1");
+</script>
+</head>
+<body>
+<button id="box1" onclick="changeDiv()">Change</button>
+</body>
+<script type="text/javascript">
+	function changeDiv(){
+		var box1=document.getElementById("box1");
+		console.log(box1);
+		
+		var value=window.prompt("Enter a value");
+		console.log(value);
+		
+		var bool=window.confirm("Do you want to go home?")
+		console.log(bool);
+		
+		console.log(window.alert("Danger"));
+		
+		var greeting=function(msg){
+			return "welcome "+msg;
+		}
+		
+		greeting('Dishant');
+	}
+</script>
+</html>

@@ -1,0 +1,82 @@
+/* Selectors using  */
+/* Element */
+div {
+	color: red;
+	font-family: cursive;
+}
+
+/* Id */
+#box2{
+	color: blue;
+	background-image: radial-gradient(red,green);
+}
+
+/* class */
+.box3{
+	background-image: linear-gradient(180deg,red,green);
+}
+
+/* Universal */
+*{
+	font-size: large;
+}
+
+
+h1,h2,h3{
+	font-weight: lighter;
+	text-decoration: line-through;
+}
+
+ul>li{
+	list-style-type: hiragana-iroha;
+}
+
+/* paragraph after heading  */
+/* Sibling Selector */
+h1~p{
+	background: aqua;
+}
+
+div:hover {
+	font-family: fantasy;
+}
+
+/* Attribute Styling  */
+[type="text"]{
+	font-style: italic;
+}
+[type="password"]:focus{
+	background-color: gray;
+}
+
+/* Structural Styling */
+ul li:nth-child(even) {
+	color:fuchsia;
+}
+
+ul li:first-child {
+	color:green;
+}
+
+ul li:last-child {
+	color:maroon;
+}
+
+
+p::first-letter {
+	font: small-caps;
+	color: teal;
+}
+p::first-line {
+	font-size: small;
+}
+p::before {
+	content:"Nikalo "
+}
+.coloring{
+	/* a->alpha */
+	/* color:rgba(190,150,210,0.5); */
+	font-size: xx-large;
+	font-weight: bolder;
+	color: hsl(0,100%,90%)
+}
