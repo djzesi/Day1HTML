@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="formValidation.js"></script>
+<style type="text/css">
+	.errMsg{
+		color:red;
+		font-style: italic;
+	}
+</style>
+</head>
+<body>
+<form action="Success.html"  onsubmit="return validateDetails()">
+	<table>
+		<tr>
+			<td>Enter UserName</td>
+			<td><input type="text" id="txtName" required></td>
+			<td>
+				<div class="errMsg" id="errFName"></div>	
+			</td>
+		</tr>
+		<tr>
+			<td>Enter Password</td>
+			<td><input type="password" id="txtPass" required></td>
+			<td>
+				<div class="errMsg" id="errPass"></div>	
+			</td>
+		</tr>
+		<tr>
+			<td>Select Date of Joining</td>
+			<td><input type="date" max="2020-02-28" min="2020-02-01"></td>
+			
+		</tr>
+		<tr>
+			<td>Select Id Proof:</td>
+			<td>
+				<input type="checkbox" name="idProof" value="ADR">Aadhar
+				<input type="checkbox" name="idProof" value="PP">Passport
+				<input type="checkbox" name="idProof" value="PAN">PAN
+			</td>
+			<td>
+				<div class="errMsg" id="errIdProof"></div>	
+			</td>
+		</tr>
+		<tr>
+			<td>Select Preferred Location:</td>
+			<td>
+				<input type="radio" name="loc" value="MI">Mumbai
+				<input type="radio" name="loc" value="RCB">Bengaluru
+				<input type="radio" name="loc" value="KXIP">Punjab
+				<input type="radio" name="loc" value="SRH">Hyderabad
+			</td>
+			<td>
+				<div class="errMsg" id="errLoc"></div>	
+			</td>
+		</tr>			
+		<tr>
+			<td>Select Skill:</td>
+			<td>
+				<select id="skill">
+					<option value="java" >Java</option>
+					<option value="angj">AngularJs</option>
+					<option value="react">ReactJs</option>
+					<option value="ang">Angular</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="register"/></td>
+		</tr>	
+	</table>
+</form>
+</body>
+</html>

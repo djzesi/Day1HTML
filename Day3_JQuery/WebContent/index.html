@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#login").click(function() {
+
+			//var username=$("txtName").attr('value');
+			var username = $("#txtName").val();
+			var password = $("#txtPass").val();
+
+			if (username == "acn" && password == "acn123") {
+
+				var checked = $("#terms").prop('checked');
+				if (!checked) {
+					alert("Please agree our terms and conditions");
+				} else {
+					$("#msg").text("Hello " + username);
+					$("#msg").html("<b>Hello " + username + "</b>");
+					$("#msg").css({
+						'color' : 'blue'
+					});
+				}
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<form>
+		Enter your name <input type="text" id="txtName"> Enter your
+		passkey <input type="password" id="txtPass"> <input
+			type="checkbox" id="terms">Agree with terms <input
+			type="button" id="login" value="Login">
+
+	</form>
+	<div id="msg"></div>
+</body>
+</html>
